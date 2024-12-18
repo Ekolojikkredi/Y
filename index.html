@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekolojik Kredi Projesi</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Ekolojik Kredi Logo">
+      <h1>Ekolojik Kredi</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav class="nav-buttons">
+      <button onclick="showPage('about-us')">Hakkımızda</button>
+      <button onclick="showPage('register-form')">Öğrenci Kaydı</button>
+      <button onclick="showPage('waste-entry')">Atık Girişi</button>
+      <button onclick="showPage('view-data')">Veri Görüntüle</button>
+    </nav>
+
+    <div id="about-us" class="page">
+      <h2>Ekolojik Kredi Nedir?</h2>
+      <p>Ekolojik Kredi Projesi, çevreye duyarlı bir nesil yetiştirmeyi ve Türkiye genelinde geri dönüşüm bilincini yaygınlaştırmayı amaçlayan kapsamlı bir projedir.</p>
+      <p>Bu proje, okullar arasında atıkların toplanması ve geri dönüşümü konusunda bilinç oluşturmayı hedeflemektedir. Öğrenciler, geri dönüşüm yaparak kredi kazanır ve bu krediler, belirli ödüllerle takas edilebilir.</p>
+    </div>
+
+    <div id="register-form" class="page">
+      <h2>Öğrenci Kayıt Formu</h2>
+      <form id="student-form">
+        <input type="text" id="name" placeholder="İsim Soyisim" required>
+        <input type="email" id="email" placeholder="E-posta" required>
+        <input type="text" id="school" placeholder="Okul" required>
+        <input type="text" id="school-num" placeholder="Okul Numarası" required>
+        <input type="text" id="city" placeholder="İl" required>
+        <input type="text" id="district" placeholder="İlçe" required>
+        <button type="submit">Kaydet</button>
+      </form>
+    </div>
+
+    <div id="waste-entry" class="page">
+      <h2>Atık Veri Girişi</h2>
+      <form id="waste-entry-form">
+        <input type="text" id="student-name" placeholder="Öğrenci İsmi" required>
+        <input type="number" id="kg" placeholder="Atık Miktarı (kg)" required>
+        <select id="waste-type" required>
+          <option value="kağıt">Kağıt</option>
+          <option value="plastik">Plastik</option>
+          <option value="cam">Cam</option>
+          <option value="metal">Metal</option>
+          <option value="elektronik">Elektronik</option>
+          <option value="yağ">Yağ</option>
+          <option value="tekstil">Tekstil</option>
+          <option value="pil">Pil</option>
+        </select>
+        <label for="separate">Atık Ayrıştırıldı mı?</label>
+        <select id="separate" required>
+          <option value="evet">Evet</option>
+          <option value="hayir">Hayır</option>
+        </select>
+        <button type="submit">Veri Kaydet</button>
+      </form>
+    </div>
+
+    <div id="view-data" class="page">
+      <h2>Öğrenci Geçmişi</h2>
+      <div id="student-history">
+        <!-- Geçmiş veriler burada görüntülenecek -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Ekolojik Kredi Projesi - Tüm hakları saklıdır.</p>
+  </footer>
+</body>
+</html>
